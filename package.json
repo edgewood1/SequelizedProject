@@ -1,0 +1,27 @@
+{
+  "name": "sequelized_project",
+  "version": "1.0.0",
+  "description": "Submit the name of a burger and click the button to devour it - a record of this process will be kept",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgewood1/SequelizedProject.git"
+  },
+  "author": "Mel DeJesus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edgewood1/SequelizedProject/issues"
+  },
+  "homepage": "https://github.com/edgewood1/SequelizedProject#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.9",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.4"
+  }
+}

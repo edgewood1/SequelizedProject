@@ -1,0 +1,83 @@
+
+
+<h1>Project List</h1>
+
+ <div id="below">
+
+<h2 id="add">Add a Project</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="ca">Project Name:</label>
+    <input type="text" id="ca" name="project_name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="slee">Completed?</label><br>
+    <input type="radio" name="completed" value="1" checked> Completed!<br>
+    <input type="radio" name="completed" value="0"> Uncompleted. 
+  </div>
+
+  <button type="submit">Add Project</button>
+</form>
+
+</div>
+
+<div id="top">
+
+<div id="left">
+
+<h2>Uncompleted Projects</h2>
+
+
+
+<ul >
+  {{#each projects}}
+    {{#unless this.completed}}
+      <li>
+        {{this.project_name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="completed" value="true">
+          <button type="submit">Completed!</button>
+        </form>
+       <form action="/{{this.id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="completed" value="false">
+          <button type="submit">Delete this Project</button>
+        </form>
+
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+</div>
+<div id="right">
+
+<h2>Completed Projects</h2>
+
+
+
+<ul >
+  {{#each projects}}
+    {{#if this.completed}}
+      <li>
+        {{this.project_name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="completed" value="false">
+          <button type="submit">Revisit this Project</button>
+        </form>
+        <form action="/{{this.id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="completed" value="false">
+          <button type="submit">Delete this Project</button>
+        </form>
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+</div>
+ </div>
+
+
+ 

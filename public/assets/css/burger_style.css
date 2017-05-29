@@ -1,0 +1,70 @@
+body {
+	 background: aqua;
+}
+
+#left {
+	float: left;
+	margin-left: 10%;
+	padding: 1%;
+	width:30%;
+
+}
+
+#right {
+	padding:1%;
+	margin-right: 5%;
+	float: right;
+	width: 30%;
+}
+
+#top {margin-bottom: 40%;}
+
+#below {
+	/*float: right;*/
+	margin-top: 35%;
+	width: 30%;
+	margin: auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+/*form {
+	width: 30%;
+}*/
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 3% 15%;
+  margin: 5%;
+  background: #faebd7;
+  /*width: 30%;*/
+
+  border: 1px solid black;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px auto;
+  background: aqua;
+
+}
+
+.form-group {
+	 
+  margin-bottom: 5px;
+}
+
+#add {
+	text-align: center;
+}
+
+button {width: 100%;}
+ 
